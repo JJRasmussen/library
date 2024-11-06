@@ -1,3 +1,11 @@
 *{
     background: peachpuff;
 }
+
+.bookCard{
+    border: solid black 2px;
+    border-radius: 8px;
+
+    height: 160px;
+    width: 180px;
+}
