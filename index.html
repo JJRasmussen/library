@@ -7,15 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="bookOverview">
-        <div class="bookCard">
-            <h2 class="bookTitle">The Hobbit</h2>
-            <div class="bookInfo">
-                <li class="bookAuthor">J.J.R. Tolkien</li>
-                <li class="bookPages">295</li>
-                <li class="bookRead">Not read</li>
-            </div>
+
+    <div class="header">
+        <h1 class="title">My Book Library</h1>
+        <button>Log in</button>
+     </div>
+
+    <div class="center">
+        <div class="bookOverview">
+            <dialog class="formDialog">
+                <form id="bookForm" action="">
+                    <legend id="addBookLegend">Add a new book</legend>
+                    <div class="inputHolder">
+                        <input type="text" id="title" required placeholder="Title" name="title">
+                        <label for="title">Title</label>
+                    </div>
+
+                    <div class="inputHolder">
+                        <input type="text" id="author" required placeholder="Author" name="author">
+                        <label for="author">author</label>
+                    </div>
+                    
+                    <div class="inputHolder">
+                        <input type="number" id="pages" required name="pages">
+                        <label for="number">page count</label>
+                    </div>
+
+                    <div class="inputHolder">
+                        <input type="radio" id="notRead" required name="read" value="Not read">
+                        <label for="notRead">Not read yet</label>
+
+                        <input type="radio" id="read" required name="read" value="Read">
+                        <label for="read">Read</label>
+
+                        <button type="button" class="closeDialogButton">Cancel</button>
+                        <button type="submit" id="addBookButton" form="bookForm" formmethod="dialog">Add book</button>
+                    </div>
+                    
+                </form>
+            </dialog>
+
+            <button class="showDialog">Add new book to Library</button>
         </div>
     </div>
 
